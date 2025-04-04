@@ -1,5 +1,7 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
+import { primary_text_color, primary_text_gradient } from '../theme/text.style';
+import { button_background_color } from '../theme/background.style';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -8,7 +10,7 @@ export function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
@@ -18,16 +20,16 @@ export function Contact() {
     <div className="pt-20 min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="container mx-auto px-6 py-12">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-emerald-400 to-teal-400 text-transparent bg-clip-text">
+          <h1 className={`text-4xl font-bold mb-8 text-center ${primary_text_gradient} bg-clip-text`}>
             Contact Us
           </h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold mb-6 text-emerald-400">Get in Touch</h2>
+              <h2 className={`text-2xl font-bold mb-6 ${primary_text_color}`}>Get in Touch</h2>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <MapPin className="w-6 h-6 text-emerald-400 mr-4 mt-1" />
+                  <MapPin className={`w-6 h-6 ${primary_text_color} mr-4 mt-1`} />
                   <div>
                     <h3 className="font-semibold mb-1">Address</h3>
                     <p className="text-slate-300">
@@ -39,7 +41,7 @@ export function Contact() {
                 </div>
                 
                 <div className="flex items-start">
-                  <Phone className="w-6 h-6 text-emerald-400 mr-4 mt-1" />
+                  <Phone className={`w-6 h-6 ${primary_text_color} mr-4 mt-1`} />
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
                     <p className="text-slate-300">(555) 123-4567</p>
@@ -47,7 +49,7 @@ export function Contact() {
                 </div>
                 
                 <div className="flex items-start">
-                  <Mail className="w-6 h-6 text-emerald-400 mr-4 mt-1" />
+                  <Mail className={`w-6 h-6 ${primary_text_color} mr-4 mt-1`} />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <p className="text-slate-300">info@milestone-construction.com</p>
@@ -57,7 +59,7 @@ export function Contact() {
             </div>
             
             <div>
-              <h2 className="text-2xl font-bold mb-6 text-emerald-400">Send us a Message</h2>
+              <h2 className={`text-2xl font-bold mb-6 ${primary_text_color}`}>Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -106,9 +108,9 @@ export function Contact() {
                 
                 <button
                   type="submit"
-                  className="bg-emerald-500 text-white px-6 py-2 rounded-xl font-semibold
-                    hover:bg-emerald-400 transition-colors flex items-center
-                    shadow-lg shadow-emerald-500/20"
+                  className={` text-white px-6 py-2 rounded-xl font-semibold
+                     transition-colors flex items-center
+                    shadow-lg shadow-orange-500/20 ${button_background_color}`}
                 >
                   <Send className="w-4 h-4 mr-2" />
                   Send Message

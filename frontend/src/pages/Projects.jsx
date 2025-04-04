@@ -1,4 +1,5 @@
 import { Building2, Users, Calendar } from 'lucide-react';
+import { primary_text_color, primary_text_gradient } from '../theme/text.style';
 
 const projects = [
   {
@@ -34,7 +35,7 @@ export function Projects() {
   return (
     <div className="pt-20 min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="container mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-emerald-400 to-teal-400 text-transparent bg-clip-text">
+        <h1 className={`${primary_text_gradient} text-4xl font-bold mb-12 text-center bg-clip-text`}>
           Our Projects
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -46,19 +47,19 @@ export function Projects() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-emerald-400">{project.title}</h3>
+                <h3 className={`text-xl font-bold mb-3 ${primary_text_color}`}>{project.title}</h3>
                 <p className="text-slate-300 mb-4">{project.description}</p>
                 <div className="space-y-2 text-sm text-slate-300">
                   <div className="flex items-center">
-                    <Users className="w-4 h-4 mr-2 text-emerald-400" />
+                    <Users className={`w-4 h-4 mr-2 ${primary_text_color} `} />
                     <span>Client: {project.client}</span>
                   </div>
                   <div className="flex items-center">
-                    <Calendar className="w-4 h-4 mr-2 text-emerald-400" />
+                    <Calendar className={`w-4 h-4 mr-2 ${primary_text_color} `} />
                     <span>Completion: {project.completion}</span>
                   </div>
                   <div className="flex items-center">
-                    <Building2 className="w-4 h-4 mr-2 text-emerald-400" />
+                    <Building2 className={`w-4 h-4 mr-2 ${primary_text_color} `} />
                     <span>Project Value: {project.value}</span>
                   </div>
                 </div>
