@@ -1,7 +1,7 @@
 import { Briefcase, GraduationCap, Clock, MapPin, Send } from 'lucide-react';
 import { useCallback, useState } from 'react';
 import { primary_text_color, primary_text_gradient } from '../theme/text.style';
-import { button_background_color } from '../theme/background.style';
+import { button_background_color, primary_background_color } from '../theme/background.style';
 
 const jobOpenings = [
   {
@@ -53,7 +53,7 @@ export function Careers() {
   }, [selectedJob]);
 
   return (
-    <div className="pt-20 min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">
+    <div className={`pt-20 min-h-screen ${primary_background_color}`}>
       <div className="container mx-auto px-6 py-12">
         <div className="max-w-6xl mx-auto">
           <h1 className={`text-4xl font-bold mb-8 text-center ${primary_text_gradient} bg-clip-text`}>

@@ -1,73 +1,205 @@
-import { Building2, Users, Calendar } from 'lucide-react';
-import { primary_text_color, primary_text_gradient } from '../theme/text.style';
+import React, { useState } from 'react';
+import { primary_text_color } from '../theme/text.style';
 
-const projects = [
-  {
-    id: 1,
-    title: "Modern Office Complex",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80",
-    description: "A state-of-the-art office complex featuring sustainable design and smart building technology.",
-    client: "Tech Innovations Inc.",
-    completion: "2024",
-    value: "$45M"
-  },
-  {
-    id: 2,
-    title: "Luxury Residential Tower",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80",
-    description: "Premium residential development with panoramic city views and high-end amenities.",
-    client: "Urban Living Development",
-    completion: "2023",
-    value: "$75M"
-  },
-  {
-    id: 3,
-    title: "Shopping Mall Complex",
-    image: "https://images.unsplash.com/photo-1557182307-a2f5d37fe974?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80",
-    description: "Modern retail space with entertainment facilities and sustainable features.",
-    client: "Retail Solutions Group",
-    completion: "2024",
-    value: "$60M"
-  }
-];
+const Projects = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-export function Projects() {
+  const slides = [
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+    {
+      title: "LUXURY PPT DESIGN",
+      button: "TAKE A LOOK",
+      subtitle: "simple minimal design that describes the style of your business",
+      image1Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743832523/WhatsApp_Image_2025-04-05_at_11.21.42_p4xaxm.jpg',
+      image2Url: 'https://res.cloudinary.com/dyka5knvr/image/upload/v1743831955/WhatsApp_Image_2025-04-05_at_11.06.58_oih9ly.jpg',
+    },
+
+   
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  // Placeholder image URLs (using placeholder API)
+  const officePlaceholder = "https://res.cloudinary.com/dyka5knvr/image/upload/v1743832520/WhatsApp_Image_2025-04-05_at_11.21.49_cteuly.jpg";
+  const interiorPlaceholder = "https://res.cloudinary.com/dyka5knvr/image/upload/v1743832520/WhatsApp_Image_2025-04-05_at_11.21.49_cteuly.jpg";
+
+  // Dots decoration component
+  const DotsDecoration = () => (
+    <div className="grid grid-cols-3 gap-1">
+      {[...Array(9)].map((_, i) => (
+        <div key={i} className="w-1 h-1 bg-black rounded-full" />
+      ))}
+    </div>
+  );
+
+  // Render slide based on type
+  const renderSlide = (slide) => {
+    return (
+      <div className="bg-black/80 p-8 flex h-full">
+        <div className="w-1/2 pr-4 flex flex-col justify-center gap-3">
+          <h1 className={`text-4xl font-bold mb-1 text-orange-400`}>{slide.title}</h1>
+          <h1 className={` font-bold mb-1 text-black text-lg` }>{slide.subtitle}</h1>
+          <button className="bg-black text-white text-lg px-4 py-2 mb-4 w-32">
+            Explore
+          </button>
+        </div>
+        <div className="w-1/2">
+          <img
+            src={slide.image1Url}
+            alt="Office Interior"
+            className="w-full h-48 object-cover rounded-xl"
+          />
+
+          <img
+            src={slide.image2Url}
+            alt="Office Interior"
+            className="w-full h-48 mt-5 object-cover rounded-xl"
+          />
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className="pt-20 min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">
-      <div className="container mx-auto px-6 py-12">
-        <h1 className={`${primary_text_gradient} text-4xl font-bold mb-12 text-center bg-clip-text`}>
-          Our Projects
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <div key={project.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 shadow-xl">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className={`text-xl font-bold mb-3 ${primary_text_color}`}>{project.title}</h3>
-                <p className="text-slate-300 mb-4">{project.description}</p>
-                <div className="space-y-2 text-sm text-slate-300">
-                  <div className="flex items-center">
-                    <Users className={`w-4 h-4 mr-2 ${primary_text_color} `} />
-                    <span>Client: {project.client}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Calendar className={`w-4 h-4 mr-2 ${primary_text_color} `} />
-                    <span>Completion: {project.completion}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Building2 className={`w-4 h-4 mr-2 ${primary_text_color} `} />
-                    <span>Project Value: {project.value}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div className="bg-black p-4 min-h-screen pt-36">
+      {/* Main presentation window */}
+      <div className="mx-auto mb-6 w-full max-w-4xl aspect-video bg-white shadow-lg">
+        {renderSlide(slides[currentSlide])}
+      </div>
+
+      {/* Navigation dots */}
+      <div className="flex justify-center mb-6">
+        <div className="flex space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-4 h-4 rounded-full ${currentSlide === index ? "bg-white" : "bg-gray-600"
+                }`}
+            />
           ))}
         </div>
       </div>
+
+      {/* Slide thumbnails grid */}
+      <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`bg-gray-900 shadow-md cursor-pointer ${currentSlide === index ? "ring-2 ring-white" : ""
+              }`}
+            style={{ aspectRatio: "16/9" }}
+          >
+            <div className="transform scale-90 h-full bg-white">
+              <img src={slide.image1Url} alt='' className='w-full h-full object-cover' />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default Projects;
