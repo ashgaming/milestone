@@ -1,19 +1,11 @@
-// import { Canvas } from '@react-three/fiber';
-// import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei';
-// import { Building3D } from './Building3D';
 
 import { memo, useEffect, useState } from "react";
 
-// Custom loading component (you can style this however you like)
-const LoadingIndicator = () => (
-  <div className="h-screen w-full flex items-center justify-center bg-gray-200">
-  </div>
-);
 
 const Scene3D = memo(() => {
 
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full -z-10">
       <iframe
         src="https://skybox.blockadelabs.com/e/52568c1efc576509ae58f5f3735aba1e"
         className={`w-full h-full `}

@@ -3,12 +3,17 @@ import { Link } from 'react-router-dom';
 import Scene3D from '../components/Scene3D';
 import { primary_text_gradient } from '../theme/text.style';
 import { button_background_color, primary_background_color } from '../theme/background.style';
+import { memo, useMemo } from 'react';
+import ModelViewer from '../sections/model';
  
-export function Home() {
+const Home = memo(() => {
+  const memoizedScene = useMemo(() => {
+    return <Scene3D />;
+  }, []);
   return (
     <main>
       <section className="relative h-screen">
-        <Scene3D />
+      {memoizedScene}
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-transparent via-slate-900/70 to-slate-900">
           <div className="text-center px-4">
             <h1 className={`${primary_text_gradient} text-6xl font-bold mb-1 pb-3  bg-clip-text`}>
@@ -30,6 +35,12 @@ export function Home() {
           </div>
         </div>
       </section>
+
+
+      {/* <ModelViewer/> */}
+
     </main>
   );
-}
+})
+
+export default Home;
